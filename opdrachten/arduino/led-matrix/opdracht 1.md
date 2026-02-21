@@ -5,6 +5,8 @@ level: 5
 template: default
 progLang: arduino
 theme: arduino
+description: |
+  Spelen met een LED matrix
 infoBlocks:
   - title: Voorkennis
     content: | 

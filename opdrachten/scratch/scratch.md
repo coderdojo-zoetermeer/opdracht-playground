@@ -1,10 +1,12 @@
 ---
 title: Scratch playground
 author: Ben Mens
-level: 1
+level: 5
 template: default
 progLang: scratch3
 theme: scratch
+description: |
+  In deze opdracht wordt bla bla bla
 infoBlocks:
   - title: Voorkennis
     content: | 
@@ -24,6 +26,7 @@ infoBlocks:
 :::
 
 ________________________________________________________________________________
+
 <!-- @include: global-lib/explain-mod.md#scratch -->
 ________________________________________________________________________________
 *pagebreak*

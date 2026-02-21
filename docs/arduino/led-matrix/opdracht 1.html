@@ -109,7 +109,7 @@
               </div>
 
               <hr class="separator-fat">
-<p><img src="./assets/matrix-display.png" alt="schema" width="200" class="float-right"></p>
+<p><img src="./assets/matrix-display.png" alt="" width="200" class="float-right"></p>
 <h2>Benodigdheden</h2>
 <ul>
 <li>1 Arduino (UNO)+USB</li>
@@ -128,8 +128,8 @@ opdracht gaan we een led-lampje besturen met een joystick.</p>
 </div>
 <hr class="separator-hidden">
 <div class="read">
-<p><img src="./assets/1088as-datasheet-pins.gif" alt="schema" width="100" class="float-right">
-<img src="./assets/matrix-pinout.png" alt="schema" width="200" class="float-right"></p>
+<p><img src="./assets/1088as-datasheet-pins.gif" alt="" width="100" class="float-right">
+<img src="./assets/matrix-pinout.png" alt="" width="200" class="float-right"></p>
 <p><em>Uitleg werking LED matrix</em></p>
 <p>In een LED-matrix zijn de LEDs opgesteld in rijen en kolommen. Alle Anode pins
 van de leds zijn verbonden met de anode pins van de andere leds in dezelfde rij.
@@ -154,7 +154,7 @@ kruispunt van de rij en de kolom gaat dan aan.</p>
 <hr class="separator-hidden">
 <p><div class="pagebreak"></div></p>
 <div class="build">
-<p><img src="./assets/schema1.svg" alt="schema" width="600" class="float-right"></p>
+<p><img src="./assets/schema1.svg" alt="" width="600" class="float-right"></p>
 <p><em>Bouwen van de elektronica</em></p>
 <p>Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
 van alle spullen die je nodig hebt.</p>
@@ -163,7 +163,7 @@ van alle spullen die je nodig hebt.</p>
 <hr class="separator-hidden">
 <p><div class="pagebreak"></div></p>
 <div class="build">
-<p><img src="./assets/led-matrix-bb.png" alt="schema" width="600" class="float-right"></p>
+<p><img src="./assets/led-matrix-bb.png" alt="" width="600" class="float-right"></p>
 <p><em>Bouwen van de elektronica</em></p>
 <p>Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
 van alle spullen die je nodig hebt.</p>
@@ -192,10 +192,11 @@ van alle spullen die je nodig hebt.</p>
 <hr class="separator-hidden">
 <div class="read">
 <p><em>Uitleg modulo functie</em></p>
-<p>Stel dat je 13 snoepjes wil verdelen over 4 vrienden. Iedereen krijgt dan 3
-snoepjes, en er blijft er dan 1 over. Dus <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>=</mo><mn>3</mn><mspace width="0.5em"/><mi>r</mi><mi>e</mi><mi>s</mi><mi>t</mi><mspace width="0.5em"/><mn>1</mn></mrow><annotation encoding="application/x-tex">13/4 = 3\enspace rest\enspace 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">13/4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord mathnormal">res</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord">1</span></span></span></span>.
-Wat er overblijft is de restwaarde. Deze restwaarde kan je uitrekenen met de
-modulo functie.</p>
+<p>De modulo functie geeft de restwaarde van een <em>gedeeld door</em> som met gehele
+getallen.</p>
+<p>Bijvoorbeeld: Stel dat je 13 snoepjes wil verdelen over 4 vrienden. Iedereen
+krijgt dan 3 snoepjes, en er blijft er dan 1 over.</p>
+<p>Dus <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>=</mo><mn>3</mn><mspace width="0.5em"/><mi>r</mi><mi>e</mi><mi>s</mi><mi>t</mi><mspace width="0.5em"/><mn>1</mn></mrow><annotation encoding="application/x-tex">13/4 = 3\enspace rest\enspace 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">13/4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord mathnormal">res</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord">1</span></span></span></span></p>
 <p>Bij arduino schrijf je de modulo functie als een <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">%</span></span></span></span>-teken.</p>
 <p>Voorbeeld:</p>
 <pre><code class="language-c">    integer rest = <span class="hljs-number">13</span> % <span class="hljs-number">4</span>; <span class="hljs-comment">// De waarde van rest wordt 1</span>
