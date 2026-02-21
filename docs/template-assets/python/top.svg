@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 25" preserveAspectRatio="none">
+  <rect width="12.5" height="25" style="stroke-width: 0px; stroke: rgb(34, 73, 105); fill: rgb(255, 211, 68);"/>
+  <rect width="50" height="25" style="stroke-width: 0; stroke: rgb(34, 73, 105); fill: rgb(34, 73, 105);" x="12.5"/>
+  <rect width="12.5" height="25" style="stroke-width: 0; stroke: rgb(34, 73, 105); fill: rgb(255, 211, 68);" x="62.5"/>
+</svg>

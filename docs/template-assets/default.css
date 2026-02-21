@@ -1,0 +1,200 @@
+@media print {
+  .pagebreak {
+    page-break-before: always;
+    margin: 20px;
+  }
+
+  @page {
+    @bottom-right {
+      content: "Pagina " counter(page) " van " counter(pages);
+    }
+  }
+
+  .header {
+    position: fixed;
+  }
+
+  .footer {
+    position: fixed;
+    bottom: 0px;
+  }
+
+  .header-space {
+    height: 100px;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  .language-logo {
+    position: absolute;
+    margin-top: 5px;
+    height: 50px;
+    position-area: top;
+    z-index: 1;
+  }
+}
+
+@media screen {
+  .header {
+    position: relative;
+  }
+
+  .footer {
+    position: relative;
+  }
+
+  .language-logo {
+    position: absolute;
+    margin-top: 5px;
+    /* width: 300px; */
+    max-width: 30%;
+    max-height: 100px;
+    aspect-ratio: initial;
+    position-area: top;
+    z-index: 1;
+  }
+
+  body,
+  table {
+    font-size: 15pt;
+  }
+}
+
+body,
+table {
+  font-family: "Open Sans", sans-serif;
+}
+
+.float-left {
+  float: left;
+  margin: 15px;
+}
+
+.float-right {
+  float: right;
+  margin: 15px;
+}
+
+.assignment-content {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.clear-float {
+  clear: both;
+}
+
+.separator-thin {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 1em 0;
+  padding: 0;
+  clear: both;
+}
+
+.assignment-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.header-info-block {
+  flex: 1 1 auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.header-info-title {
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+
+.read {
+  border: 2px solid blue;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.read::before {
+  background-image: url("./readme-brands-solid-full.svg");
+  float: left;
+}
+
+.program {
+  border: 2px solid green;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.program::before {
+  background-image: url("./code-solid-full.svg");
+  float: left;
+}
+
+.build {
+  border: 2px solid black;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.build::before {
+  background-image: url("./hammer-solid-full.svg");
+  float: left;
+  content: "uitdaging";
+}
+
+.challenge {
+  border: 2px solid red;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.challenge::before {
+  background-image: url("./lightbulb-regular-full.svg");
+  float: left;
+}
+
+.codeblock {
+  border: 1px solid gray;
+  box-shadow: 3px 3px;
+  padding: 20px;
+}
+
+.read::before,
+.program::before,
+.build::before,
+.program::before,
+.challenge::before {
+  background-size: 40px;
+  background-repeat: no-repeat;
+  background-position: left-top;
+  content: "";
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+hr {
+  clear: both;
+}
+
+hr.separator-fat {
+  clear: both;
+  border-width: 0px;
+  border-style: solid;
+}
+
+hr.separator-hidden {
+  clear: both;
+  display: none;
+}

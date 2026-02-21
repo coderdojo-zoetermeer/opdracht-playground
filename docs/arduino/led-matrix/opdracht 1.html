@@ -11,7 +11,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/templates/assets/default.css" />
+    <link rel="stylesheet" href="/template-assets/default.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
 
@@ -19,14 +19,14 @@
     <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
     <style>
       body {
-        background-image: url("/templates/assets/arduino/left.svg"), url("/templates/assets/arduino/right.svg");
+        background-image: url("/template-assets/arduino/left.svg"), url("/template-assets/arduino/right.svg");
         background-size: 15px, 15px;
         background-repeat: repeat-y, repeat-y;
         background-position: left, right;
         margin: 0px;
       }
       .header {
-        background-image: url("/templates/assets/arduino/top.svg");
+        background-image: url("/template-assets/arduino/top.svg");
         background-size: 100% 15px;
         background-repeat: no-repeat;
         width: 100%;
@@ -34,7 +34,7 @@
       }
 
       .footer {
-        background-image: url("/templates/assets/arduino/bottom.svg");
+        background-image: url("/template-assets/arduino/bottom.svg");
         background-size: 100% 15px;
         background-repeat: no-repeat;
         width: 100%;
@@ -42,7 +42,7 @@
       }
       .separator-fat {
         display: block;
-        background-image: url("/templates/assets/arduino/separator.svg");
+        background-image: url("/template-assets/arduino/separator.svg");
         background-size: 100% 10px;
         background-repeat: no-repeat;
         height: 10px;
@@ -55,18 +55,18 @@
 
   <body>
     <img
-      src="/templates/assets/logo-arduino.png"
+      src="/template-assets/logo-arduino.png"
       class="language-logo"
     />
     <div class="header">
       <div class="header-content">
         <div style="padding-top: 20px; padding-left: 30px; max-height: 50px">
           <img
-            src="/templates/assets/logo-coderdojo-nl.png"
+            src="/template-assets/logo-coderdojo-nl.png"
             style="width: 250px; position: relative"
           />
           <img
-            src="/templates/assets/logo-zoetermeer.png"
+            src="/template-assets/logo-zoetermeer.png"
             style="width: 250px; position: relative; right: 30px; float: right"
           />
         </div>
@@ -90,7 +90,7 @@
           <td>
             <div class="assignment-content">
               <img
-                src="/templates/assets/level5.svg"
+                src="/template-assets/level5.svg"
                 style="width: 200px; float: right; margin-right: 0px"
               />
               <p class="assignment-title">Led Matrix</p>
@@ -190,7 +190,17 @@ van alle spullen die je nodig hebt.</p>
 </div>
 </div>
 <hr class="separator-hidden">
-<p>File not found</p>
+<div class="read">
+<p><em>Uitleg modulo functie</em></p>
+<p>Stel dat je 13 snoepjes wil verdelen over 4 vrienden. Iedereen krijgt dan 3
+snoepjes, en er blijft er dan 1 over. Dus <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>=</mo><mn>3</mn><mspace width="0.5em"/><mi>r</mi><mi>e</mi><mi>s</mi><mi>t</mi><mspace width="0.5em"/><mn>1</mn></mrow><annotation encoding="application/x-tex">13/4 = 3\enspace rest\enspace 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">13/4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord mathnormal">res</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord">1</span></span></span></span>.
+Wat er overblijft is de restwaarde. Deze restwaarde kan je uitrekenen met de
+modulo functie.</p>
+<p>Bij arduino schrijf je de modulo functie als een <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">%</span></span></span></span>-teken.</p>
+<p>Voorbeeld:</p>
+<pre><code class="language-c">    integer rest = <span class="hljs-number">13</span> % <span class="hljs-number">4</span>; <span class="hljs-comment">// De waarde van rest wordt 1</span>
+</code></pre>
+</div>
 <hr class="separator-hidden">
 <div class="challenge">
 <p><em>Uitdaging</em></p>
