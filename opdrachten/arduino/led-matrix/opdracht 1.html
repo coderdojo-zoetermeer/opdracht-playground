@@ -1,0 +1,223 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/arduino-light.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/templates/assets/default.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+    <style>
+      body {
+        background-image: url("/templates/assets/arduino/left.svg"), url("/templates/assets/arduino/right.svg");
+        background-size: 15px, 15px;
+        background-repeat: repeat-y, repeat-y;
+        background-position: left, right;
+        margin: 0px;
+      }
+      .header {
+        background-image: url("/templates/assets/arduino/top.svg");
+        background-size: 100% 15px;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 15px;
+      }
+
+      .footer {
+        background-image: url("/templates/assets/arduino/bottom.svg");
+        background-size: 100% 15px;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 15px;
+      }
+      .separator-fat {
+        display: block;
+        background-image: url("/templates/assets/arduino/separator.svg");
+        background-size: 100% 10px;
+        background-repeat: no-repeat;
+        height: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        clear: both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img
+      src="/templates/assets/logo-arduino.png"
+      class="language-logo"
+    />
+    <div class="header">
+      <div class="header-content">
+        <div style="padding-top: 20px; padding-left: 30px; max-height: 50px">
+          <img
+            src="/templates/assets/logo-coderdojo-nl.png"
+            style="width: 250px; position: relative"
+          />
+          <img
+            src="/templates/assets/logo-zoetermeer.png"
+            style="width: 250px; position: relative; right: 30px; float: right"
+          />
+        </div>
+      </div>
+
+      <div style="padding-left: 30px; padding-right: 30px">
+        <div class="separator-fat"></div>
+      </div>
+    </div>
+
+    <table style="width: 100%">
+      <thead>
+        <tr>
+          <th>
+            <div class="header-space"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="assignment-content">
+              <img
+                src="/templates/assets/level5.svg"
+                style="width: 200px; float: right; margin-right: 0px"
+              />
+              <p class="assignment-title">Led Matrix</p>
+
+              <div style="display: flex; flex-direction: row; gap: 0px 10px">
+                  <div class="header-info-block">
+                    <div class="header-info-title">Voorkennis</div>
+                    <p>LED, if, for, functions (basis), joystick</p>
+
+                  </div>
+                  <div class="header-info-block">
+                    <div class="header-info-title">Leerdoelen</div>
+                    <p>LED matrix, HIGH, LOW, abs, %</p>
+
+                  </div>
+              </div>
+
+              <hr class="separator-fat">
+<p><img src="./assets/matrix-display.png" alt="schema" width="200" class="float-right"></p>
+<h2>Benodigdheden</h2>
+<ul>
+<li>1 Arduino (UNO)+USB</li>
+<li>2 Breadboards</li>
+<li>1 8x8 LED Matrix</li>
+<li>1 Joystick</li>
+<li>8 1kΩ weerstanden</li>
+<li>Many jump wires</li>
+</ul>
+<hr class="separator-fat">
+<div class="read">
+<p><em>Introductie</em></p>
+<p>In deze opdracht ga je werken met een led matrix. Dit is een scherm waarin 64
+led-lampjes zitten en waarmee je allerlei leuke patronen kan maken. In deze
+opdracht gaan we een led-lampje besturen met een joystick.</p>
+</div>
+<hr class="separator-hidden">
+<div class="read">
+<p><img src="./assets/1088as-datasheet-pins.gif" alt="schema" width="100" class="float-right">
+<img src="./assets/matrix-pinout.png" alt="schema" width="200" class="float-right"></p>
+<p><em>Uitleg werking LED matrix</em></p>
+<p>In een LED-matrix zijn de LEDs opgesteld in rijen en kolommen. Alle Anode pins
+van de leds zijn verbonden met de anode pins van de andere leds in dezelfde rij.
+Ale kathode pins van de leds zijn verbonden met de kathode pins van de andere
+leds in dezelfde kolom. De aansluitpennetjes op de LED-matrix zijn verbonden
+met de rijen en kolommen.</p>
+<p>Hiernaast kan je zien hoe een LED-matrix er vanbinnen uitziet. Ook kan je zien
+welke pins worden gebruikt om de rijen en de kolommen te besturen.</p>
+<p>Bijvoorbeeld de pin C8 links boven is voor kolom 1. De pin R5 links onder is
+voor rij 5.</p>
+<p><div class="clear-float"></div></p>
+</div>
+<hr class="separator-hidden">
+<p><div class="pagebreak"></div></p>
+<div class="read">
+<p><em>Uitleg LED matrix</em></p>
+<p>Je kan een LED aanzetten door een kolom <strong>HIGH</strong> te maken en een rij <strong>LOW</strong> te
+maken. Er gaat dan stroom lopen van <strong>HIGH</strong> naar <strong>LOW</strong>. De LED op het
+kruispunt van de rij en de kolom gaat dan aan.</p>
+<p>Op deze manier kunnen de 64 LEDs met slechts 16 aansluitingen worden bestuurd.</p>
+</div>
+<hr class="separator-hidden">
+<p><div class="pagebreak"></div></p>
+<div class="build">
+<p><img src="./assets/schema1.svg" alt="schema" width="600" class="float-right"></p>
+<p><em>Bouwen van de elektronica</em></p>
+<p>Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
+van alle spullen die je nodig hebt.</p>
+<p><div class="clear-float"></div></p>
+</div>
+<hr class="separator-hidden">
+<p><div class="pagebreak"></div></p>
+<div class="build">
+<p><img src="./assets/led-matrix-bb.png" alt="schema" width="600" class="float-right"></p>
+<p><em>Bouwen van de elektronica</em></p>
+<p>Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
+van alle spullen die je nodig hebt.</p>
+<p><div class="clear-float"></div></p>
+</div>
+<hr class="separator-hidden">
+<p><div class="pagebreak"></div></p>
+<div class="program">
+<p><em>Aanroepen van <strong>updateDisplay()</strong> functie</em></p>
+<div class="codeblock">
+<pre><code class="language-ino">
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Animation</span> {
+  <span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> nextTime;
+  <span class="hljs-type">int</span> step = <span class="hljs-number">0</span>;
+} Animation;
+</code></pre>
+<pre><code class="language-c">
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+<span class="hljs-comment">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+<span class="hljs-comment">// Voeg hier code toe om de updateDisplay functie aan te roepen</span>
+<span class="hljs-comment">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
+}
+</code></pre>
+</div>
+</div>
+<hr class="separator-hidden">
+<p>File not found</p>
+<hr class="separator-hidden">
+<div class="challenge">
+<p><em>Uitdaging</em></p>
+<p>Probeer eens om .......</p>
+</div>
+<hr class="separator-hidden">
+<div class="challenge">
+<p><em>Uitdaging</em></p>
+<p>Probeer eens om .......</p>
+</div>
+<hr class="separator-hidden">
+<p><a href="https://fontawesome.com/search?ic=free-collection" target="_blank">font awesome</a></p>
+<p><em>separator1</em></p>
+
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>
+            <div class="footer-space"></div>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="footer"></div>
+  </body>
+</html>

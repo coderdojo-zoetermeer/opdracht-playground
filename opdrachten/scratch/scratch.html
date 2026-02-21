@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/arduino-light.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/templates/assets/default.css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+    <style>
+      body {
+        background-image: url("/templates/assets/scratch/left.svg"), url("/templates/assets/scratch/right.svg");
+        background-size: 15px, 15px;
+        background-repeat: repeat-y, repeat-y;
+        background-position: left, right;
+        margin: 0px;
+      }
+      .header {
+        background-image: url("/templates/assets/scratch/top.svg");
+        background-size: 100% 15px;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 15px;
+      }
+
+      .footer {
+        background-image: url("/templates/assets/scratch/bottom.svg");
+        background-size: 100% 15px;
+        background-repeat: no-repeat;
+        width: 100%;
+        min-height: 15px;
+      }
+      .separator-fat {
+        display: block;
+        background-image: url("/templates/assets/scratch/separator.svg");
+        background-size: 100% 10px;
+        background-repeat: no-repeat;
+        height: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        clear: both;
+      }
+    </style>
+  </head>
+
+  <body>
+    <img
+      src="/templates/assets/logo-scratch3.png"
+      class="language-logo"
+    />
+    <div class="header">
+      <div class="header-content">
+        <div style="padding-top: 20px; padding-left: 30px; max-height: 50px">
+          <img
+            src="/templates/assets/logo-coderdojo-nl.png"
+            style="width: 250px; position: relative"
+          />
+          <img
+            src="/templates/assets/logo-zoetermeer.png"
+            style="width: 250px; position: relative; right: 30px; float: right"
+          />
+        </div>
+      </div>
+
+      <div style="padding-left: 30px; padding-right: 30px">
+        <div class="separator-fat"></div>
+      </div>
+    </div>
+
+    <table style="width: 100%">
+      <thead>
+        <tr>
+          <th>
+            <div class="header-space"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="assignment-content">
+              <img
+                src="/templates/assets/level1.svg"
+                style="width: 200px; float: right; margin-right: 0px"
+              />
+              <p class="assignment-title">Scratch playground</p>
+
+              <div style="display: flex; flex-direction: row; gap: 0px 10px">
+                  <div class="header-info-block">
+                    <div class="header-info-title">Voorkennis</div>
+                    
+                  </div>
+                  <div class="header-info-block">
+                    <div class="header-info-title">Leerdoelen</div>
+                    
+                  </div>
+              </div>
+
+              <hr class="separator-fat">
+<div class="read">
+<p><em>Introductie</em></p>
+<p>...</p>
+</div>
+<hr class="separator-hidden">
+<div class="read">
+<p><em>Uitleg modulo functie</em></p>
+<p>Stel dat je 13 snoepjes wil verdelen over 4 vrienden. Iedereen krijgt dan 3
+snoepjes, en er blijft er dan 1 over. Dus <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>=</mo><mn>3</mn><mspace width="0.5em"/><mi>r</mi><mi>e</mi><mi>s</mi><mi>t</mi><mspace width="0.5em"/><mn>1</mn></mrow><annotation encoding="application/x-tex">13/4 = 3\enspace rest\enspace 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">13/4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord mathnormal">res</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord">1</span></span></span></span>.
+Wat er overblijft is de restwaarde. Deze restwaarde kan je uitrekenen met de
+modulo functie.</p>
+<p>Voorbeeld:</p>
+<p><img src="../lib/modulo-scratch-example.svg" alt="example"></p>
+<p>De variabele met de naam <em>rest</em> heeft nu de waarde 1.</p>
+</div>
+<hr class="separator-hidden">
+<p><div class="pagebreak"></div></p>
+<div class="program">
+<p><em>Laat de kat lopen</em></p>
+<p>Voeg de onderstaande blokken toe aan de code van <img src="./assets/cat.svg" alt="cat" width="50"></p>
+<p><img src="./assets/zet-10.png" alt="cat" width="300"></p>
+</div>
+<hr class="separator-hidden">
+<div class="challenge">
+<p><em>Uitdaging</em></p>
+<p>Probeer eens om .......</p>
+</div>
+<hr class="separator-hidden">
+<div class="challenge">
+<p><em>Uitdaging</em></p>
+<p>Probeer eens om .......</p>
+</div>
+
+            </div>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>
+            <div class="footer-space"></div>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+
+    <div class="footer"></div>
+  </body>
+</html>
