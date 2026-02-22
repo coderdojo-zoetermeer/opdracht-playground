@@ -1,6 +1,7 @@
 ---
 title: Led Matrix
-author: Ben Mens
+acknowledgements:
+  author: Ben Mens
 level: 1
 template: default
 progLang: arduino
@@ -43,11 +44,11 @@ opdracht gaan we een led-lampje besturen met een joystick.
 :::
 
 ________________________________________________________________________________
-
+*pagebreak*
 ::: read
 
-![schema =400x](./assets/led-matrix-schema.svg){.float-right}
-![schema =400x](./assets/matrix-pinout.png){.float-right}
+![schema =300x](./assets/led-matrix-schema.svg){.float-right}
+![schema =300x](./assets/matrix-pinout.png){.float-right}
 
 *Uitleg werking LED matrix*
 
@@ -76,7 +77,7 @@ ________________________________________________________________________________
 
 ::: build
 
-![schema =600x](./assets/led-matrix-bb_bb.svg){.float-right}
+![schema =500x](./assets/led-matrix-bb_bb.svg){.float-right}
 
 *Bouwen van de elektronica*
 
@@ -129,6 +130,7 @@ void loop() {
 ::::
 
 ________________________________________________________________________________
+*pagebreak*
 
 :::: program
 
@@ -170,6 +172,7 @@ void loop() {
 ::::
 
 ________________________________________________________________________________
+*pagebreak*
 
 :::: program
 
@@ -209,11 +212,12 @@ void loop() {
 ::::
 
 ________________________________________________________________________________
+*pagebreak*
 
 ::: challenge
 *Uitdaging*
 
-![meer leds =500x ](./assets/led-matrix-meer-leds.svg){.float-right}
+![meer leds =300x ](./assets/led-matrix-meer-leds.svg){.float-right}
 
 Probeer ook de volgende LEDs aan te zetten:
 
@@ -223,6 +227,6 @@ Probeer ook de volgende LEDs aan te zetten:
 Je zal merken dat dit wel lukt als je een LEDje tegelijk doet. Als je probeert
 meerdere LEDS tegelijk aan te zetten dan gaan ook andere LEDs aan.
 
-Hieronder kan je zien hoe dat komt.
+Hiernaast kan je zien hoe dat komt.
 
 :::
