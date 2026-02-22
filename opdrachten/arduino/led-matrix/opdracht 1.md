@@ -1,7 +1,7 @@
 ---
 title: Led Matrix
 author: Ben Mens
-level: 5
+level: 1
 template: default
 progLang: arduino
 theme: arduino
@@ -46,32 +46,22 @@ ________________________________________________________________________________
 
 ::: read
 
-![schema =100x](./assets/1088as-datasheet-pins.gif){ .float-right }
-![schema =200x](./assets/matrix-pinout.png){ .float-right }
+![schema =400x](./assets/led-matrix-schema.svg){.float-right}
+![schema =400x](./assets/matrix-pinout.png){.float-right}
 
 *Uitleg werking LED matrix*
 
-In een LED-matrix zijn de LEDs opgesteld in rijen en kolommen. Alle Anode pins
+In een LED-matrix zijn de LEDs opgesteld in rijen en kolommen. Alle anode pins
 van de leds zijn verbonden met de anode pins van de andere leds in dezelfde rij.
 Ale kathode pins van de leds zijn verbonden met de kathode pins van de andere
-leds in dezelfde kolom. De aansluitpennetjes op de LED-matrix zijn verbonden
+leds in dezelfde kolom. De aansluitpinnen op de LED-matrix zijn verbonden
 met de rijen en kolommen.
 
 Hiernaast kan je zien hoe een LED-matrix er vanbinnen uitziet. Ook kan je zien
 welke pins worden gebruikt om de rijen en de kolommen te besturen.
 
-Bijvoorbeeld de pin C8 links boven is voor kolom 1. De pin R5 links onder is
-voor rij 5.
-
-*clear-float*
-:::
-
-________________________________________________________________________________
-*pagebreak*
-
-::: read
-
-*Uitleg LED matrix*
+Bijvoorbeeld de pin 16 (C8) links boven is voor kolom 8. De pin 1 (R5)
+links onder is voor rij 5.
 
 Je kan een LED aanzetten door een kolom **HIGH** te maken en een rij **LOW** te
 maken. Er gaat dan stroom lopen van **HIGH** naar **LOW**. De LED op het
@@ -85,6 +75,7 @@ ________________________________________________________________________________
 *pagebreak*
 
 ::: build
+
 ![schema =600x](./assets/led-matrix-bb_bb.svg){.float-right}
 
 *Bouwen van de elektronica*
@@ -92,22 +83,6 @@ ________________________________________________________________________________
 Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
 van alle spullen die je nodig hebt.
 
-*clear-float*
-
-:::
-
-________________________________________________________________________________
-*pagebreak*
-
-::: build
-![schema =600x](./assets/led-matrix-bb.png){.float-right}
-
-*Bouwen van de elektronica*
-
-Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
-van alle spullen die je nodig hebt.
-
-*clear-float*
 :::
 
 ________________________________________________________________________________
@@ -115,19 +90,39 @@ ________________________________________________________________________________
 
 :::: program
 
-*Aanroepen van **updateDisplay()** functie*
+*Maken van pin-lijsten*
+
+In de code hieronder wordt een variabele met de naam <code>matrixSize</code>
+gemaakt met de waarde 8 omdat het aantal kolommen en het aantal rijen 8 is.
+
+Daarna wordt er een lijst gemaakt met de naam colPins. Deze lijst bevat de
+8 pin-nummers van de kolommen. Als je wilt weten welke pin bestuurd moet worden
+voor kolom 4 dan kan je <code>colPins[3]</code> gebruiken. De uitkomst wordt dan 10.
+De reden dat je <code>colPins[3]</code> moet gebruiken in plaats van
+<code>colPins[4]</code> is dat lijsten in Arduino altijd bij 0 beginnen te tellen.
+De lijst loopt dus van <code>colPins[0]</code> t/m <code>colPins[7]</code>.
+
+Begin een nieuwe Arduino sketch en verwijder alle code. Neem de onderstaande
+code over.
+
+Probeer nu zelf de lijst met de naam <code>rowPins</code> af te maken met de  lijst met
+de nummers van de Arduino pennen van de rijen.
 
 ::: codeblock
 
-<<<src/led-matrix1/led-matrix1.ino#snippet
-
 ```c
+const int matrixSize = 8;
+const byte colPins[matrixSize] = { 13, 12, 11, 10, 9, 8, 7, 6 };
+const byte rowPins???????????????
 
 void setup() {
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// Voeg hier code toe om de updateDisplay functie aan te roepen
-// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 }
+
+void loop() {
+
+}
+
 ```
 
 :::
@@ -135,26 +130,99 @@ void setup() {
 
 ________________________________________________________________________________
 
-<!-- @include: global-lib/explain-mod.md#arduino -->
+:::: program
+
+*Arduino pinnen als OUTPUT instellen*
+
+De pinnen van een Arduino moeten nu als OUTPUT worden ingesteld omdat we waardes
+naar de pinnen willen schrijven. We doen dat in een for-loop. Voor elk
+pin-nummer in de lijst colPins wordt de pin als OUTPUT ingesteld. De waarde van
+de pins in <code>colPins</code> wordt ingesteld op <code>LOW</code>.
+
+Maak nu het programma verder af zodat ook de rowPins als output worden ingesteld.
+De waarde van de pins in <code>rowPins</code> moet <code>HIGH</code> worden.
+
+::: codeblock
+
+```c
+const int matrixSize = 8;
+const byte colPins[matrixSize] = { 13, 12, 11, 10, 9, 8, 7, 6 };
+const byte rowPins[matrixSize] = { A0, A1, A2, A3, 2, 3, 4, 5 };
+
+void setup() {
+  for (int pin = 0; pin < matrixSize; pin++) {
+    pinMode(colPins[pin], OUTPUT);
+    digitalWrite(colPins[pin], LOW);
+
+    pinMode(?????, ?????);
+    digitalWrite(?????, ??????);
+  }
+}
+
+void loop() {
+  
+}
+
+```
+
+:::
+
+::::
+
+________________________________________________________________________________
+
+:::: program
+
+*LEDs besturen*
+
+We gaan nu een ledje aanzetten. Maak de code hieronder af zodat het 3e LEDje in
+rij 6 aan gaat.
+
+Maak de code hieronder af en upload het naar de Arduino om het uit te proberen.
+
+::: codeblock
+
+```c
+const int matrixSize = 8;
+const byte colPins[matrixSize] = { 13, 12, 11, 10, 9, 8, 7, 6 };
+const byte rowPins[matrixSize] = { A0, A1, A2, A3, 2, 3, 4, 5 };
+
+void setup() {
+  for (int pin = 0; pin < matrixSize; pin++) {
+    pinMode(colPins[pin], OUTPUT);
+    digitalWrite(colPins[pin], LOW);
+
+    pinMode(rowPins[pin], OUTPUT);
+    digitalWrite(rowPins[pin], HIGH);
+  }
+}
+
+void loop() {
+  digitalWrite(colPins[????????], ??????);
+  digitalWrite(rowPins[????????], ??????);
+}
+
+```
+
+:::
+
+::::
 
 ________________________________________________________________________________
 
 ::: challenge
 *Uitdaging*
 
-Probeer eens om .......
+![meer leds =500x ](./assets/led-matrix-meer-leds.svg){.float-right}
+
+Probeer ook de volgende LEDs aan te zetten:
+
+- Rij 2 Kolom 4
+- Rij 8 Kolom 7
+
+Je zal merken dat dit wel lukt als je een LEDje tegelijk doet. Als je probeert
+meerdere LEDS tegelijk aan te zetten dan gaan ook andere LEDs aan.
+
+Hieronder kan je zien hoe dat komt.
+
 :::
-
-________________________________________________________________________________
-
-::: challenge
-*Uitdaging*
-
-Probeer eens om .......
-:::
-
-________________________________________________________________________________
-
-[font awesome](https://fontawesome.com/search?ic=free-collection){target=_blank}
-
-*separator1*

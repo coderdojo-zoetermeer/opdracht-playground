@@ -12,52 +12,70 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../../template-assets/default.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet" type="text/css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab"
+      rel="stylesheet"
+      type="text/css"
+    />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css" integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T" crossorigin="anonymous">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js" integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.css"
+      integrity="sha384-Wsr4Nh3yrvMf2KCebJchRJoVo1gTU6kcP05uRSh5NV3sj9+a8IomuJoQzf3sMq4T"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.28/dist/katex.min.js"
+      integrity="sha384-+W9OcrYK2/bD7BmUAk+xeFAyKp0QjyRQUCxeU31dfyTt/FrPsUgaBTLLkVf33qWt"
+      crossorigin="anonymous"
+    ></script>
     <style>
       body {
         background-image: url("../../template-assets/arduino/left.svg"), url("../../template-assets/arduino/right.svg");
-        background-size: 15px, 15px;
-        background-repeat: repeat-y, repeat-y;
-        background-position: left, right;
-        margin: 0px;
-      }
-      .header {
-        background-image: url("../../template-assets/arduino/top.svg");
-        background-size: 100% 15px;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 15px;
-      }
+                                                                                                                                                                                      background-size: 15px, 15px;
+                                                                                                                                                                                      background-repeat: repeat-y, repeat-y;
+                                                                                                                                                                                      background-position: left, right;
+                                                                                                                                                                                      margin: 0px;
+                                                                                                                                                                                    }
+                                                                                                                                                                                    .header {
+                                                                                                                                                                                      background-image: url("../../template-assets/arduino/top.svg");
+                                                                                                                                                                                      background-size: 100% 15px;
+                                                                                                                                                                                      background-repeat: no-repeat;
+                                                                                                                                                                                      width: 100%;
+                                                                                                                                                                                      min-height: 15px;
+                                                                                                                                                                                    }
 
-      .footer {
-        background-image: url("../../template-assets/arduino/bottom.svg");
-        background-size: 100% 15px;
-        background-repeat: no-repeat;
-        width: 100%;
-        min-height: 15px;
-      }
-      .separator-fat {
-        display: block;
-        background-image: url("../../template-assets/arduino/separator.svg");
-        background-size: 100% 10px;
-        background-repeat: no-repeat;
-        height: 10px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        clear: both;
-      }
+                                                                                                                                                                                    .footer {
+                                                                                                                                                                                      background-image: url("../../template-assets/arduino/bottom.svg");
+                                                                                                                                                                                      background-size: 100% 15px;
+                                                                                                                                                                                      background-repeat: no-repeat;
+                                                                                                                                                                                      width: 100%;
+                                                                                                                                                                                      min-height: 15px;
+                                                                                                                                                                                    }
+                                                                                                                                                                                    .separator-fat {
+                                                                                                                                                                                      display: block;
+                                                                                                                                                                                      background-image: url("../../template-assets/arduino/separator.svg");
+                                                                                                                                                                                      background-size: 100% 10px;
+                                                                                                                                                                                      background-repeat: no-repeat;
+                                                                                                                                                                                      height: 10px;
+                                                                                                                                                                                      margin-top: 5px;
+                                                                                                                                                                                      margin-bottom: 5px;
+                                                                                                                                                                                      clear: both;
+                                                                                                                                                                                    }
     </style>
   </head>
 
   <body>
-    <img
-      src="../../template-assets/logo-arduino.png"
-      class="language-logo"
-    />
+      <img
+        src="../../template-assets/logo-arduino.png"
+        class="language-logo"
+      />
     <div class="header">
       <div class="header-content">
         <div style="padding-top: 20px; padding-left: 30px; max-height: 50px">
@@ -90,7 +108,7 @@
           <td>
             <div class="assignment-content">
               <img
-                src="../../template-assets/level5.svg"
+                src="../../template-assets/level1.svg"
                 style="width: 200px; float: right; margin-right: 0px"
               />
               <p class="assignment-title">Led Matrix</p>
@@ -125,97 +143,192 @@
 <p>In deze opdracht ga je werken met een led matrix. Dit is een scherm waarin 64
 led-lampjes zitten en waarmee je allerlei leuke patronen kan maken. In deze
 opdracht gaan we een led-lampje besturen met een joystick.</p>
-</div>
-<hr class="separator-hidden">
+<div class="clear-float"></div></div><hr class="separator-hidden">
 <div class="read">
-<p><img src="./assets/1088as-datasheet-pins.gif" alt="" width="100" class="float-right">
-<img src="./assets/matrix-pinout.png" alt="" width="200" class="float-right"></p>
+<p><img src="./assets/led-matrix-schema.svg" alt="" width="400" class="float-right">
+<img src="./assets/matrix-pinout.png" alt="" width="400" class="float-right"></p>
 <p><em>Uitleg werking LED matrix</em></p>
-<p>In een LED-matrix zijn de LEDs opgesteld in rijen en kolommen. Alle Anode pins
+<p>In een LED-matrix zijn de LEDs opgesteld in rijen en kolommen. Alle anode pins
 van de leds zijn verbonden met de anode pins van de andere leds in dezelfde rij.
 Ale kathode pins van de leds zijn verbonden met de kathode pins van de andere
-leds in dezelfde kolom. De aansluitpennetjes op de LED-matrix zijn verbonden
+leds in dezelfde kolom. De aansluitpinnen op de LED-matrix zijn verbonden
 met de rijen en kolommen.</p>
 <p>Hiernaast kan je zien hoe een LED-matrix er vanbinnen uitziet. Ook kan je zien
 welke pins worden gebruikt om de rijen en de kolommen te besturen.</p>
-<p>Bijvoorbeeld de pin C8 links boven is voor kolom 1. De pin R5 links onder is
-voor rij 5.</p>
-<p><div class="clear-float"></div></p>
-</div>
-<hr class="separator-hidden">
-<p><div class="pagebreak"></div></p>
-<div class="read">
-<p><em>Uitleg LED matrix</em></p>
+<p>Bijvoorbeeld de pin 16 (C8) links boven is voor kolom 8. De pin 1 (R5)
+links onder is voor rij 5.</p>
 <p>Je kan een LED aanzetten door een kolom <strong>HIGH</strong> te maken en een rij <strong>LOW</strong> te
 maken. Er gaat dan stroom lopen van <strong>HIGH</strong> naar <strong>LOW</strong>. De LED op het
 kruispunt van de rij en de kolom gaat dan aan.</p>
 <p>Op deze manier kunnen de 64 LEDs met slechts 16 aansluitingen worden bestuurd.</p>
-</div>
-<hr class="separator-hidden">
+<div class="clear-float"></div></div><hr class="separator-hidden">
 <p><div class="pagebreak"></div></p>
 <div class="build">
 <p><img src="./assets/led-matrix-bb_bb.svg" alt="" width="600" class="float-right"></p>
 <p><em>Bouwen van de elektronica</em></p>
 <p>Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
 van alle spullen die je nodig hebt.</p>
-<p><div class="clear-float"></div></p>
-</div>
-<hr class="separator-hidden">
-<p><div class="pagebreak"></div></p>
-<div class="build">
-<p><img src="./assets/led-matrix-bb.png" alt="" width="600" class="float-right"></p>
-<p><em>Bouwen van de elektronica</em></p>
-<p>Maak het volgende schema na. Vraag aan een mentor om te helpen met het uitzoeken
-van alle spullen die je nodig hebt.</p>
-<p><div class="clear-float"></div></p>
-</div>
-<hr class="separator-hidden">
+<div class="clear-float"></div></div><hr class="separator-hidden">
 <p><div class="pagebreak"></div></p>
 <div class="program">
-<p><em>Aanroepen van <strong>updateDisplay()</strong> functie</em></p>
+<p><em>Maken van pin-lijsten</em></p>
+<p>In de code hieronder wordt een variabele met de naam <code>matrixSize</code>
+gemaakt met de waarde 8 omdat het aantal kolommen en het aantal rijen 8 is.</p>
+<p>Daarna wordt er een lijst gemaakt met de naam colPins. Deze lijst bevat de
+8 pin-nummers van de kolommen. Als je wilt weten welke pin bestuurd moet worden
+voor kolom 4 dan kan je <code>colPins[3]</code> gebruiken. De uitkomst wordt dan 10.
+De reden dat je <code>colPins[3]</code> moet gebruiken in plaats van
+<code>colPins[4]</code> is dat lijsten in Arduino altijd bij 0 beginnen te tellen.
+De lijst loopt dus van <code>colPins[0]</code> t/m <code>colPins[7]</code>.</p>
+<p>Begin een nieuwe Arduino sketch en verwijder alle code. Neem de onderstaande
+code over.</p>
+<p>Probeer nu zelf de lijst met de naam <code>rowPins</code> af te maken met de  lijst met
+de nummers van de Arduino pennen van de rijen.</p>
 <div class="codeblock">
-<pre><code class="language-ino">
-<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> <span class="hljs-title class_">Animation</span> {
-  <span class="hljs-type">unsigned</span> <span class="hljs-type">long</span> nextTime;
-  <span class="hljs-type">int</span> step = <span class="hljs-number">0</span>;
-} Animation;
-</code></pre>
-<pre><code class="language-c">
-<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
-<span class="hljs-comment">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
-<span class="hljs-comment">// Voeg hier code toe om de updateDisplay functie aan te roepen</span>
-<span class="hljs-comment">// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</span>
-}
-</code></pre>
-</div>
-</div>
-<hr class="separator-hidden">
-<div class="read">
-<p><em>Uitleg modulo functie</em></p>
-<p>De modulo functie geeft de restwaarde van een <em>gedeeld door</em> som met gehele
-getallen.</p>
-<p>Bijvoorbeeld: Stel dat je 13 snoepjes wil verdelen over 4 vrienden. Iedereen
-krijgt dan 3 snoepjes, en er blijft er dan 1 over.</p>
-<p>Dus <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>13</mn><mi mathvariant="normal">/</mi><mn>4</mn><mo>=</mo><mn>3</mn><mspace width="0.5em"/><mi>r</mi><mi>e</mi><mi>s</mi><mi>t</mi><mspace width="0.5em"/><mn>1</mn></mrow><annotation encoding="application/x-tex">13/4 = 3\enspace rest\enspace 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">13/4</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord mathnormal">res</span><span class="mord mathnormal">t</span><span class="mspace" style="margin-right:0.5em;"></span><span class="mord">1</span></span></span></span></p>
-<p>Bij arduino schrijf je de modulo functie als een <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">%</span></span></span></span>-teken.</p>
-<p>Voorbeeld:</p>
-<pre><code class="language-c">    integer rest = <span class="hljs-number">13</span> % <span class="hljs-number">4</span>; <span class="hljs-comment">// De waarde van rest wordt 1</span>
-</code></pre>
-</div>
-<hr class="separator-hidden">
-<div class="challenge">
-<p><em>Uitdaging</em></p>
-<p>Probeer eens om .......</p>
-</div>
-<hr class="separator-hidden">
-<div class="challenge">
-<p><em>Uitdaging</em></p>
-<p>Probeer eens om .......</p>
-</div>
-<hr class="separator-hidden">
-<p><a href="https://fontawesome.com/search?ic=free-collection" target="_blank">font awesome</a></p>
-<p><em>separator1</em></p>
+<pre><code class="language-c"><span class="hljs-type">const</span> <span class="hljs-type">int</span> matrixSize = <span class="hljs-number">8</span>;
+<span class="hljs-type">const</span> byte colPins[matrixSize] = { <span class="hljs-number">13</span>, <span class="hljs-number">12</span>, <span class="hljs-number">11</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span> };
+<span class="hljs-type">const</span> byte rowPins???????????????
 
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+
+}
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+
+}
+
+</code></pre>
+<div class="clear-float"></div></div><div class="clear-float"></div></div><hr class="separator-hidden">
+<div class="program">
+<p><em>Arduino pinnen als OUTPUT instellen</em></p>
+<p>De pinnen van een Arduino moeten nu als OUTPUT worden ingesteld omdat we waardes
+naar de pinnen willen schrijven. We doen dat in een for-loop. Voor elk
+pin-nummer in de lijst colPins wordt de pin als OUTPUT ingesteld. De waarde van
+de pins in <code>colPins</code> wordt ingesteld op <code>LOW</code>.</p>
+<p>Maak nu het programma verder af zodat ook de rowPins als output worden ingesteld.
+De waarde van de pins in <code>rowPins</code> moet <code>HIGH</code> worden.</p>
+<div class="codeblock">
+<pre><code class="language-c"><span class="hljs-type">const</span> <span class="hljs-type">int</span> matrixSize = <span class="hljs-number">8</span>;
+<span class="hljs-type">const</span> byte colPins[matrixSize] = { <span class="hljs-number">13</span>, <span class="hljs-number">12</span>, <span class="hljs-number">11</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span> };
+<span class="hljs-type">const</span> byte rowPins[matrixSize] = { A0, A1, A2, A3, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> };
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> pin = <span class="hljs-number">0</span>; pin &lt; matrixSize; pin++) {
+    <span class="hljs-built_in">pinMode</span>(colPins[pin], OUTPUT);
+    <span class="hljs-built_in">digitalWrite</span>(colPins[pin], LOW);
+
+    <span class="hljs-built_in">pinMode</span>(?????, ?????);
+    <span class="hljs-built_in">digitalWrite</span>(?????, ??????);
+  }
+}
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  
+}
+
+</code></pre>
+<div class="clear-float"></div></div><div class="clear-float"></div></div><hr class="separator-hidden">
+<div class="program">
+<p><em>LEDs besturen</em></p>
+<p>We gaan nu een ledje aanzetten. Maak de code hieronder af zodat het 3e LEDje in
+rij 6 aan gaat.</p>
+<p>Maak de code hieronder af en upload het naar de Arduino om het uit te proberen.</p>
+<div class="codeblock">
+<pre><code class="language-c"><span class="hljs-type">const</span> <span class="hljs-type">int</span> matrixSize = <span class="hljs-number">8</span>;
+<span class="hljs-type">const</span> byte colPins[matrixSize] = { <span class="hljs-number">13</span>, <span class="hljs-number">12</span>, <span class="hljs-number">11</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span> };
+<span class="hljs-type">const</span> byte rowPins[matrixSize] = { A0, A1, A2, A3, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span> };
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">setup</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> pin = <span class="hljs-number">0</span>; pin &lt; matrixSize; pin++) {
+    <span class="hljs-built_in">pinMode</span>(colPins[pin], OUTPUT);
+    <span class="hljs-built_in">digitalWrite</span>(colPins[pin], LOW);
+
+    <span class="hljs-built_in">pinMode</span>(rowPins[pin], OUTPUT);
+    <span class="hljs-built_in">digitalWrite</span>(rowPins[pin], HIGH);
+  }
+}
+
+<span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">loop</span><span class="hljs-params">()</span> </span>{
+  <span class="hljs-built_in">digitalWrite</span>(colPins[????????], ??????);
+  <span class="hljs-built_in">digitalWrite</span>(rowPins[????????], ??????);
+}
+
+</code></pre>
+<div class="clear-float"></div></div><div class="clear-float"></div></div><hr class="separator-hidden">
+<div class="challenge">
+<p><em>Uitdaging</em></p>
+<p><img src="./assets/led-matrix-meer-leds.svg" alt="" width="500" class="float-right"></p>
+<p>Probeer ook de volgende LEDs aan te zetten:</p>
+<ul>
+<li>Rij 2 Kolom 4</li>
+<li>Rij 8 Kolom 7</li>
+</ul>
+<p>Je zal merken dat dit wel lukt als je een LEDje tegelijk doet. Als je probeert
+meerdere LEDS tegelijk aan te zetten dan gaan ook andere LEDs aan.</p>
+<p>Hieronder kan je zien hoe dat komt.</p>
+<div class="clear-float"></div></div>
+
+              <hr>
+
+              <img
+                src="../../template-assets/by-nc-sa.png"
+                style="width: 117px; height: 41px; float: right"
+              />
+              <div class="license">
+
+                <p><b>[NL] Licentie Informatie</b></p>
+                <p>
+                  Voor al het materiaal in document geldt de licentie: Creative
+                  Commons Naamsvermelding-NietCommercieel-GelijkDelen 3.0
+                  <a
+                    href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
+                  >https://creativecommons.org/licenses/by-nc-sa/3.0/</a>.
+
+                </p>
+                <p>
+                  Indien u toegang wilt tot de raw bewerkbare files om het
+                  materiaal naar uw eigen doel aan te passen, ons te helpen het
+                  materiaal te verbeteren, of het materiaal te vertalen, neem
+                  dan contact met CoderDojo Zoetermeer
+                  <a
+                    href="https://codeclub.org/en/clubs/4f8d36fb-7545-4ba9-b9fb-b379b6b87938"
+                  >https://codeclub.org/en/clubs/4f8d36fb-7545-4ba9-b9fb-b379b6b87938</a>
+                </p>
+
+              </div>
+
+              <div class="license">
+                <p><b>[EN] License Information</b></p>
+                <p>
+                  All work in this document are licensed under the Creative
+                  Commons Attribution-NonCommercial-ShareAlike 3.0
+                  <a
+                    href="https://creativecommons.org/licenses/by-nc-sa/3.0/"
+                  >https://creativecommons.org/licenses/by-nc-sa/3.0/</a>.
+
+                </p>
+                <p>
+                  If you wish to gain access to the raw editable files in order
+                  to adapt our content to your own purposes, help us improve the
+                  content, or translate it, then please contact CoderDojo
+                  Zoetermeer
+                  <a
+                    href="https://codeclub.org/en/clubs/4f8d36fb-7545-4ba9-b9fb-b379b6b87938"
+                  >https://codeclub.org/en/clubs/4f8d36fb-7545-4ba9-b9fb-b379b6b87938</a>
+                  .
+                </p>
+              </div>
+              <div class="acknowledgements">
+                <em>Acknowledgements:</em>
+                <div style="padding-left: 20px;">
+                    
+                  <p>This document was created by CoderDojo Zoetermeer. The template
+                    design was inspired by the CoderDojo branding and visual
+                    identity, and incorporates elements from both organizations.
+                    We would like to thank CoderDojo Nederland for their
+                    their ongoing support of the CoderDojo community.</p>
+                </div>
+              </div>
             </div>
           </td>
         </tr>

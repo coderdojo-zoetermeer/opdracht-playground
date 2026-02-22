@@ -35,7 +35,10 @@ Animation animation;
 void setup() {
   for (int pin = 0; pin < matrixSize; pin++) {
     pinMode(colPins[pin], OUTPUT);
+    digitalWrite(colPins[pin], LOW);
+
     pinMode(rowPins[pin], OUTPUT);
+    digitalWrite(rowPins[pin], HIGH);
   }
   displayContext.nextLineTime = millis();
   animation.nextTime = millis();
@@ -84,14 +87,25 @@ void displayLoop(DisplayContext &dc) {
 }
 
 void loop() {
-  displayLoop(displayContext);
 
-  if (animation.nextTime < millis()) {
-    animation.nextTime += 100;
+  digitalWrite(colPins[2], HIGH);
+  digitalWrite(rowPins[5], LOW);
 
-    setBit(animation.step % 8, animation.step / 8, false);
-    animation.step++;
-    setBit(animation.step % 8, animation.step / 8, true);
-    animation.step %= 64;
-  }
+  digitalWrite(colPins[3], HIGH);
+  digitalWrite(rowPins[1], LOW);
+
+  digitalWrite(colPins[6], HIGH);
+  digitalWrite(rowPins[7], LOW);
+
+
+  // displayLoop(displayContext);
+
+  // if (animation.nextTime < millis()) {
+  //   animation.nextTime += 100;
+
+  //   setBit(animation.step % 8, animation.step / 8, false);
+  //   animation.step++;
+  //   setBit(animation.step % 8, animation.step / 8, true);
+  //   animation.step %= 64;
+  // }
 }
