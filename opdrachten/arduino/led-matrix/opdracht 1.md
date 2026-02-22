@@ -85,7 +85,7 @@ ________________________________________________________________________________
 *pagebreak*
 
 ::: build
-![schema =600x](./assets/schema1.svg){.float-right}
+![schema =600x](./assets/led-matrix-bb_bb.svg){.float-right}
 
 *Bouwen van de elektronica*
 
