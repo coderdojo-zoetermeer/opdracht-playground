@@ -1,5 +1,5 @@
 ---
-title: Led Matrix
+title: Led Matrix 1
 acknowledgements:
   author: Ben Mens
 level: 1
@@ -98,16 +98,17 @@ gemaakt met de waarde 8 omdat het aantal kolommen en het aantal rijen 8 is.
 
 Daarna wordt er een lijst gemaakt met de naam colPins. Deze lijst bevat de
 8 pin-nummers van de kolommen. Als je wilt weten welke pin bestuurd moet worden
-voor kolom 4 dan kan je <code>colPins[3]</code> gebruiken. De uitkomst wordt dan 10.
-De reden dat je <code>colPins[3]</code> moet gebruiken in plaats van
-<code>colPins[4]</code> is dat lijsten in Arduino altijd bij 0 beginnen te tellen.
-De lijst loopt dus van <code>colPins[0]</code> t/m <code>colPins[7]</code>.
+voor kolom 4 dan kan je <code>colPins[3]</code> gebruiken. De uitkomst wordt
+dan 10. De reden dat je <code>colPins[3]</code> moet gebruiken in plaats van
+<code>colPins[4]</code> is dat lijsten in Arduino altijd bij 0 beginnen te
+tellen. De lijst loopt dus van 
+<code>colPins[0]</code> t/m <code>colPins[7]</code>.
 
 Begin een nieuwe Arduino sketch en verwijder alle code. Neem de onderstaande
 code over.
 
-Probeer nu zelf de lijst met de naam <code>rowPins</code> af te maken met de  lijst met
-de nummers van de Arduino pennen van de rijen.
+Probeer nu zelf de lijst met de naam <code>rowPins</code> af te maken met de
+lijst met de nummers van de Arduino pennen van de rijen.
 
 ::: codeblock
 
@@ -227,6 +228,7 @@ Probeer ook de volgende LEDs aan te zetten:
 Je zal merken dat dit wel lukt als je een LEDje tegelijk doet. Als je probeert
 meerdere LEDS tegelijk aan te zetten dan gaan ook andere LEDs aan.
 
-Hiernaast kan je zien hoe dat komt.
+Hiernaast kan je zien hoe dat komt. De leds op alle kruispunten waar kolom=HIGH
+en rij=LOW gaan branden.
 
 :::

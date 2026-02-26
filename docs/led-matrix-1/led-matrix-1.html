@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <link
@@ -11,7 +12,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../../template-assets/default.css" />
+    <link rel="stylesheet" href="../template-assets/default.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans"
       rel="stylesheet"
@@ -36,55 +37,73 @@
       crossorigin="anonymous"
     ></script>
     <style>
-      body {
-        background-image: url("../../template-assets/arduino/left.svg"), url("../../template-assets/arduino/right.svg");
-                                                                                                                                                                                      background-size: 15px, 15px;
-                                                                                                                                                                                      background-repeat: repeat-y, repeat-y;
-                                                                                                                                                                                      background-position: left, right;
-                                                                                                                                                                                      margin: 0px;
-                                                                                                                                                                                    }
-                                                                                                                                                                                    .header {
-                                                                                                                                                                                      background-image: url("../../template-assets/arduino/top.svg");
-                                                                                                                                                                                      background-size: 100% 15px;
-                                                                                                                                                                                      background-repeat: no-repeat;
-                                                                                                                                                                                      width: 100%;
-                                                                                                                                                                                      min-height: 15px;
-                                                                                                                                                                                    }
 
-                                                                                                                                                                                    .footer {
-                                                                                                                                                                                      background-image: url("../../template-assets/arduino/bottom.svg");
-                                                                                                                                                                                      background-size: 100% 15px;
-                                                                                                                                                                                      background-repeat: no-repeat;
-                                                                                                                                                                                      width: 100%;
-                                                                                                                                                                                      min-height: 15px;
-                                                                                                                                                                                    }
-                                                                                                                                                                                    .separator-fat {
-                                                                                                                                                                                      display: block;
-                                                                                                                                                                                      background-image: url("../../template-assets/arduino/separator.svg");
-                                                                                                                                                                                      background-size: 100% 10px;
-                                                                                                                                                                                      background-repeat: no-repeat;
-                                                                                                                                                                                      height: 10px;
-                                                                                                                                                                                      margin-top: 5px;
-                                                                                                                                                                                      margin-bottom: 5px;
-                                                                                                                                                                                      clear: both;
-                                                                                                                                                                                    }
+      @media print {
+        body {
+        background-image: 
+          url("../template-assets/arduino/left.svg"), 
+          url("../template-assets/arduino/right.svg");
+          background-size: 15px, 15px;
+          background-repeat: repeat-y, repeat-y;
+          background-position: left, right;
+          margin: 0px;
+        }
+      }
+
+      @media screen {
+        body {
+        background-image: 
+          url("../template-assets/arduino/left.svg"), 
+          url("../template-assets/arduino/right.svg");
+          background-size: 15px 100%, 15px 100%;
+          background-repeat: no-repeat, no-repeat;
+          background-position: left, right;
+          margin: 0px;
+        }
+      }
+      
+        .header {
+          background-image: url("../template-assets/arduino/top.svg");
+          background-size: 100% 15px;
+          background-repeat: no-repeat;
+          width: 100%;
+          min-height: 15px;
+        }
+
+        .footer {
+          background-image: url("../template-assets/arduino/bottom.svg");
+          background-size: 100% 15px;
+          background-repeat: no-repeat;
+          width: 100%;
+          min-height: 15px;
+        }
+        .separator-fat {
+          display: block;
+          background-image: url("../template-assets/arduino/separator.svg");
+          background-size: 100% 10px;
+          background-repeat: no-repeat;
+          height: 10px;
+          margin-top: 5px;
+          margin-bottom: 5px;
+          clear: both;
+        }
     </style>
   </head>
 
   <body>
       <img
-        src="../../template-assets/logo-arduino.png"
+        src="../template-assets/logo-arduino.png"
         class="language-logo"
       />
     <div class="header">
       <div class="header-content">
         <div style="padding-top: 20px; padding-left: 30px; max-height: 50px">
           <img
-            src="../../template-assets/logo-coderdojo-nl.png"
+            src="../template-assets/logo-coderdojo-nl.png"
             style="width: 250px; position: relative"
           />
           <img
-            src="../../template-assets/logo-zoetermeer.png"
+            src="../template-assets/logo-zoetermeer.png"
             style="width: 250px; position: relative; right: 30px; float: right"
           />
         </div>
@@ -108,10 +127,10 @@
           <td>
             <div class="assignment-content">
               <img
-                src="../../template-assets/level1.svg"
+                src="../template-assets/level1.svg"
                 style="width: 200px; float: right; margin-right: 0px"
               />
-              <p class="assignment-title">Led Matrix</p>
+              <p class="assignment-title">Led Matrix 1</p>
 
               <div style="display: flex; flex-direction: row; gap: 0px 10px">
                   <div class="header-info-block">
@@ -177,14 +196,15 @@ van alle spullen die je nodig hebt.</p>
 gemaakt met de waarde 8 omdat het aantal kolommen en het aantal rijen 8 is.</p>
 <p>Daarna wordt er een lijst gemaakt met de naam colPins. Deze lijst bevat de
 8 pin-nummers van de kolommen. Als je wilt weten welke pin bestuurd moet worden
-voor kolom 4 dan kan je <code>colPins[3]</code> gebruiken. De uitkomst wordt dan 10.
-De reden dat je <code>colPins[3]</code> moet gebruiken in plaats van
-<code>colPins[4]</code> is dat lijsten in Arduino altijd bij 0 beginnen te tellen.
-De lijst loopt dus van <code>colPins[0]</code> t/m <code>colPins[7]</code>.</p>
+voor kolom 4 dan kan je <code>colPins[3]</code> gebruiken. De uitkomst wordt
+dan 10. De reden dat je <code>colPins[3]</code> moet gebruiken in plaats van
+<code>colPins[4]</code> is dat lijsten in Arduino altijd bij 0 beginnen te
+tellen. De lijst loopt dus van
+<code>colPins[0]</code> t/m <code>colPins[7]</code>.</p>
 <p>Begin een nieuwe Arduino sketch en verwijder alle code. Neem de onderstaande
 code over.</p>
-<p>Probeer nu zelf de lijst met de naam <code>rowPins</code> af te maken met de  lijst met
-de nummers van de Arduino pennen van de rijen.</p>
+<p>Probeer nu zelf de lijst met de naam <code>rowPins</code> af te maken met de
+lijst met de nummers van de Arduino pennen van de rijen.</p>
 <div class="codeblock">
 <pre><code class="language-c"><span class="hljs-type">const</span> <span class="hljs-type">int</span> matrixSize = <span class="hljs-number">8</span>;
 <span class="hljs-type">const</span> byte colPins[matrixSize] = { <span class="hljs-number">13</span>, <span class="hljs-number">12</span>, <span class="hljs-number">11</span>, <span class="hljs-number">10</span>, <span class="hljs-number">9</span>, <span class="hljs-number">8</span>, <span class="hljs-number">7</span>, <span class="hljs-number">6</span> };
@@ -269,13 +289,14 @@ rij 6 aan gaat.</p>
 </ul>
 <p>Je zal merken dat dit wel lukt als je een LEDje tegelijk doet. Als je probeert
 meerdere LEDS tegelijk aan te zetten dan gaan ook andere LEDs aan.</p>
-<p>Hiernaast kan je zien hoe dat komt.</p>
+<p>Hiernaast kan je zien hoe dat komt. De leds op alle kruispunten waar kolom=HIGH
+en rij=LOW gaan branden.</p>
 <div class="clear-float"></div></div>
 
               <hr>
 
               <img
-                src="../../template-assets/by-nc-sa.png"
+                src="../template-assets/by-nc-sa.png"
                 style="width: 117px; height: 41px; float: right"
               />
               <div class="license">
